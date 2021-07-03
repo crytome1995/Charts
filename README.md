@@ -1,2 +1,2 @@
 # Charts
-repo for all helm charts
+repo for all helm charts for Ethan Lebioda
