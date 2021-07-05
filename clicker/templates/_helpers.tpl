@@ -60,3 +60,14 @@ Create the name of the service account to use
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}
 {{- end }}
+
+{{/*
+Create the hostname of ingress
+*/}}
+{{- define "clicker.ingress.hostname" -}}
+{{- if eq .Values.namespace "default" }}
+click.control.clickthebutton.click
+{{- else }}
+click.pub.clickthebutton.click
+{{- end }}
+{{- end }}
