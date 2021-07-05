@@ -1,6 +1,6 @@
 # clicker
 
-#### Chart for bringing up the clicker webpage
+##### Chart for bringing up the clicker webpage
 
 Install command:  
 ```
