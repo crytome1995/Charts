@@ -18,6 +18,9 @@ metadata:
   annotations:
     {{- toYaml . | nindent 4 }}
   {{- end }}
+  {{ if eq .Values.namespace "default" }}
+    nginx.ingress.kubernetes.io/whitelist-source-range: 44.194.21.200/32,68.201.66.56/32,192.30.252.0/22,185.199.108.0/22,140.82.112.0/20,143.55.64.0/20
+  {{- end }}
 spec:
   {{- if and .Values.ingress.className (semverCompare ">=1.18-0" .Capabilities.KubeVersion.GitVersion) }}
   ingressClassName: {{ .Values.ingress.className }}
