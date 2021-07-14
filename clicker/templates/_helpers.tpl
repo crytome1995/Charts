@@ -71,3 +71,14 @@ click.control.clickthebutton.click
 click.pub.clickthebutton.click
 {{- end }}
 {{- end }}
+
+{{/*
+Get the tag suffix
+*/}}
+{{- define "clicker.tag.suffix" -}}
+{{- if eq .Values.namespace "default" -}}
+-dev
+{{- else -}}
+-prod
+{{- end }}
+{{- end }}
