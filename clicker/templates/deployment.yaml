@@ -46,13 +46,9 @@ spec:
             httpGet:
               path: /
               port: http
-          env:
-            - name: REACT_APP_SEND_CLICK_URL
-            {{- if eq .Values.namespace "default" }}
-              value: http://clickcounter.control.clickthebutton.click/click
-            {{- else }}
-              value: http://clickcounter.pub.clickthebutton.click/click
-            {{- end }}
+          {{- if eq .Values.namespace "prod" }}
+          args: ["run build"]
+          {{- end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
