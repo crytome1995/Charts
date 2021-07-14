@@ -52,6 +52,7 @@ spec:
               value: http://clickcounter.control.clickthebutton.click/click
             {{- else }}
               value: http://clickcounter.pub.clickthebutton.click/click
+            {{- end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
