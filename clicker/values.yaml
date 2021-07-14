@@ -10,7 +10,7 @@ image:
   repository: ethanlebioda/clicker
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: 0c7b449f2692f6241504f9aa83c88a74dee9ff6c
+  tag: 94ad8f69ce6502c5d51636b37f7805000c2a34ca
 
 imagePullSecrets: []
 nameOverride: ""
